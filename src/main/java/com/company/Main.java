@@ -3,6 +3,12 @@ package com.company;
 import java.util.ArrayList;
 
 public class Main {
+    public static void main(String[] args){
+        Job oneArgJob = new Job("Lifeguard", new Employer("Seaworld"), new Location("Florida"),
+                new PositionType("Customer Facing"), new CoreCompetency("Swimming"));
+        System.out.println(oneArgJob);
+    }
+
 //    public static void main(String[] args) {
 //        Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 //        Job job2 = new Job("Web Developer", new Employer("LaunchCode"), new Location("St. Louis"), new PositionType("Front-end developer"), new CoreCompetency("JavaScript"));
