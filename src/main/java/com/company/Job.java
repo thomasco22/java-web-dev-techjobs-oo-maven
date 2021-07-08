@@ -29,6 +29,30 @@ public class Job {
     }
 
     @Override
+    public String toString() {
+        if (this.name.equals("")){
+            this.name.replace("", "Data not available");
+        }else if (this.employer.getValue().equals("")){
+            this.employer.setValue("Data not available");
+        }else if (this.location.getValue().equals("")){
+            this.location.setValue("Data not available");
+        }else if (this.positionType.getValue().equals("")){
+            this.positionType.setValue("Data not available");
+        }else if (this.coreCompetency.getValue().equals("")){
+            this.coreCompetency.setValue("Data not available");
+        }
+            return "\n" +
+                    " ID: " + id +
+                    "\n Name: '" + name + '\'' +
+                    "\n Employer: " + employer +
+                    "\n Location: " + location +
+                    "\n Position Type: " + positionType +
+                    "\n Core Competency: " + coreCompetency +
+                    "\n";
+
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
